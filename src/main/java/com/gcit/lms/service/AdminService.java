@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -70,6 +71,7 @@ public class AdminService {
 ////		return null;
 ////	}
 //	
+	@CrossOrigin
 	@RequestMapping(value = "/readAuthor", method = RequestMethod.GET, produces = "application/json")
 	public List<Author> readAuthorsByName(
 			@RequestParam(value = "authorName", required = false) String authorName,
@@ -178,6 +180,7 @@ public class AdminService {
 //		}
 //	}
 //
+	@CrossOrigin
 	@RequestMapping(value = "/readBook", method = RequestMethod.GET, produces = "application/json")
 	public List<Book> readBook(@RequestParam(value = "bookId", required = false) Integer bookId,
 			@RequestParam(value = "title", required = false) String title,
@@ -475,6 +478,7 @@ public class AdminService {
 //		}
 //	}
 //	
+	@CrossOrigin
 	@RequestMapping(value = "/readLibraryBranch", method = RequestMethod.GET, produces = "application/json")
 	public List<LibraryBranch> readLibraryBranch(@RequestParam(value = "branchId", required = false) Integer branchId) {
 
