@@ -7,6 +7,11 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class BCPrimaryKey implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6858043228105103046L;
+
 	Integer bookId;
 	
 	Integer branchId;
